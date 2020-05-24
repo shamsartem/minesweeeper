@@ -89,6 +89,7 @@ export default {
     let cells: Array<Cell> = reactive(generateCells(cols.value, rows.value, realDifficulty))
 
     function onMouseDown(e: MouseEvent) {
+      if (e.which === 2) return
       pressedMouseButtons.value.add(e.which)
     }
 
@@ -107,6 +108,8 @@ export default {
     }
 
     function onMouseUp(e: MouseEvent, cell: Cell) {
+      if (e.which === 2) return
+
       setTimeout(() => {
         pressedMouseButtons.value.delete(e.which)
       })
