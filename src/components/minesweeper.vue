@@ -52,7 +52,7 @@ interface Cell {
 }
 
 export default {
-  name: 'MineSweeper',
+  name: 'Minesweeper',
   setup() {
     const gridRef = ref(null)
     const difficulty = ref(3)
@@ -251,7 +251,7 @@ function getNumberColor(n) {
 
 <style module>
   .grid {
-    --cell-size: min(calc(100vw / var(--cols)), calc((100vh - 30px) / var(--rows)));
+    --cell-size: min(calc(100vw / var(--cols)), calc((100vh - 45px) / var(--rows)));
     display: grid;
     grid-template-columns: repeat(var(--cols), var(--cell-size));
     grid-template-rows: repeat(var(--rows), var(--cell-size));
